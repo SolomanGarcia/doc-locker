@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import { Form, Button, Card, Alert } from "react-bootstrap";
 import { useAuth } from "../../contexts/AuthContext";
 import { Link, useHistory } from "react-router-dom";
+import CenterContainer from "./CenterContainer";
 
 export default function UpdateProfile() {
   const emailRef = useRef();
@@ -32,7 +33,7 @@ export default function UpdateProfile() {
 
     Promise.all(promises)
       .then(() => {
-        history.push("/");
+        history.push("/user");
       })
       .catch(() => {
         setError("Failed to update account");
@@ -81,7 +82,7 @@ export default function UpdateProfile() {
         </Card.Body>
       </Card>
       <div className="w-100 text-center mt-2">
-        <Link to="/">Cancel</Link>
+        <Link to="/user">Cancel</Link>
       </div>
     </CenterContainer>
   );

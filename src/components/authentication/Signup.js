@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import { Form, Button, Card, Alert } from "react-bootstrap";
 import { useAuth } from "../../contexts/AuthContext";
 import { Link, useHistory } from "react-router-dom";
+import CenterContainer from "./CenterContainer";
 
 export default function Signup() {
   const emailRef = useRef();
@@ -59,4 +60,5 @@ export default function Signup() {
         Already have an account? <Link to="/login">Log In</Link>
       </div>
     </CenterContainer>
+  );
 }
