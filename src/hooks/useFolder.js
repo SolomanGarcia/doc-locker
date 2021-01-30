@@ -74,7 +74,7 @@ export function useFolder(folderId = null, folder = null) {
   }, [folderId]);
 
   useEffect(() => {
-    database.folder
+    return database.folders
       .where("parentId", "==", folderId)
       .where("userId", "==", currentUser.uid)
       .orderBy("createdAt")

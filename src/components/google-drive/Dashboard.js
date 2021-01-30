@@ -17,7 +17,7 @@ export default function Dashboard() {
           <div className="d-flex flex-wrap">
             {childFolders.map((childFolder) => (
               <div
-                key={folder.id}
+                key={childFolder.id}
                 style={{ maxWidth: "250px" }}
                 className="p-2"
               >
