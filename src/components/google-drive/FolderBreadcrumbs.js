@@ -5,7 +5,7 @@ import { ROOT_FOLDER } from "../../hooks/useFolder";
 
 export default function FolderBreadcrumbs({ currentFolder }) {
   let path = currentFolder === ROOT_FOLDER ? [] : [ROOT_FOLDER];
-  if (currentFolder) path = [...path, currentFolder.path];
+  if (currentFolder) path = [...path, ...currentFolder.path];
   return (
     <Breadcrumb
       className="flex-grow-1"
