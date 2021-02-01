@@ -76,7 +76,7 @@ export default function AddFileButton({ currentFolder }) {
                 database.files.add({
                   url: url,
                   name: file.name,
-                  createdAt: database.getCurrentTimestamp(),
+                  createdAt: database.getCurrentTimeStamp(),
                   folderId: currentFolder.id,
                   userId: currentUser.uid
                 });
